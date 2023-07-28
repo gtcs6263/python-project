@@ -1,4 +1,4 @@
-from myapp.mymodule.funcs import multiply, divide
+from src.mymodule.funcs import multiply, divide
 
 
 def multiply_by_two(x):
