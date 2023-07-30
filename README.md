@@ -1,2 +1,2 @@
 # python-project
-# test ubuntu runner
+# test debian runner
