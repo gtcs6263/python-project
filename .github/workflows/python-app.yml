@@ -38,7 +38,7 @@ jobs:
       run: | 
         print("save github action secret to file")
         import os
-        data = open("pw.json", "w")
+        data = open("resources/pw.json", "w")
         for q in (os.getenv("QA_DB_PW")):
           data.write(q)
       shell: python
