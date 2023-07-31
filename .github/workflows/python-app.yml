@@ -36,8 +36,12 @@ jobs:
       env:
         QA_DB_PW: ${{ secrets.QA_DB_PW }}
       run: | 
-        echo "save github action secret to file"
-        echo $QA_DB_PW | base64 -d >> resources/pw.json
+        print("save github action secret to file")
+        import os
+        data = open("pw.json", "w")
+        for q in (os.getenv("QA_DB_PW")):
+          data.write(q)
+      shell: python
     - name: Test with pytest
       run: |
         pip install pytest
