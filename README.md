@@ -1,2 +1,2 @@
 # python-project
-# test debian runner
+# test windows runner
