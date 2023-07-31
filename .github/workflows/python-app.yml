@@ -37,7 +37,7 @@ jobs:
         QA_DB_PW: ${{ secrets.QA_DB_PW }}
       run: | 
         echo "save github action secret to file"
-        echo $QA_DB_PW >> resources/pw.json
+        echo $QA_DB_PW | base64 -d >> resources/pw.json
     - name: Test with pytest
       run: |
         pip install pytest
